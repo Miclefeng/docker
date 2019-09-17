@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    redis:
+        container_name: redis
+        image: 'bitnami/redis:latest'
+        environment:
+            #- ALLOW_EMPTY_PASSWORD=yes
+            - REDIS_PASSWORD=Ps!s5tlshitsaym
+        ports:
+            - '6379:6379'
+        volumes:
+            -  /data/docker/redis:/bitnami/redis/data
